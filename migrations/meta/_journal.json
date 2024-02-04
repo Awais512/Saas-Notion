@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1707007737126,
+      "tag": "0000_safe_jack_flag",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1707010762186,
+      "tag": "0001_public_blockbuster",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1707011685238,
+      "tag": "0002_salty_redwing",
+      "breakpoints": true
+    }
+  ]
+}
