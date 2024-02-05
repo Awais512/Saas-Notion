@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/providers/theme-provider";
 import db from "@/lib/supabase/db";
+import { twMerge } from "tailwind-merge";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +19,12 @@ export default function RootLayout({
 }>) {
   // console.log(db);
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      {children}
-    </ThemeProvider>
+    <html lang="en">
+      <body className={twMerge("bg-background", inter.className)}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
