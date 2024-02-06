@@ -10,3 +10,12 @@ export const FormSchema = z.object({
     .describe("Password")
     .min(6, { message: "Password must be at least 6 characters" }),
 });
+
+export const CreateWorkspaceFormSchema = z.object({
+  workspaceName: z
+    .string()
+    .describe("Workspace Name")
+    .min(1, "Workspace name is required"),
+
+  logo: z.any(),
+});
